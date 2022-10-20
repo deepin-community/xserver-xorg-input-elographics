@@ -1,0 +1,31 @@
+Source: xserver-xorg-input-elographics
+Section: x11
+Priority: optional
+Maintainer: Adrian Bunk <bunk@debian.org>
+Build-Depends:
+ debhelper (>= 8),
+ dh-autoreconf,
+ pkg-config,
+ quilt,
+ xserver-xorg-dev (>= 2:1.10),
+ x11proto-input-dev,
+ x11proto-core-dev,
+ x11proto-randr-dev,
+ xutils-dev
+Standards-Version: 3.9.2
+
+Package: xserver-xorg-input-elographics
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ ${xinpdriver:Depends},
+Provides:
+ ${xinpdriver:Provides}
+Description: X.Org X server -- ELOGraphics input driver
+ This package provides the driver for ELO Graphics touchscreens.
+ .
+ More information about X.Org can be found at:
+ <URL:http://www.X.org>
+ .
+ This package is built from the X.org xf86-input-elographics driver module.
